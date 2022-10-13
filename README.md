@@ -17,7 +17,7 @@
     <br>
     <br>
     <li><span style="font-size:18px"><b>2)</b></span> <samp style="color:burlywood">Desenvolvendo CSS ma Web.</samp><br>Do iniciante ao Profissional </li>
-    <a href="https://ibb.co/jrq7X9X"><img src="https://i.ibb.co/mcdQWrW/Livro-CSS2.png" alt="Livro-CSS2" border="0" ></a>
+    <a href="https://ibb.co/jrq7X9X"><img src="https://i.ibb.co/mcdQWrW/Livro-CSS2.png" alt="Livro-CSS2" border="0" width="500" height="400"></a>
 </ul>
 <br>
 <hr>
