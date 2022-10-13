@@ -1,0 +1,6 @@
+CSS vem de (Cascading Style Sheets) que e a salvacai do web desing responsavel
+Não inporta como o CSS e criado ele acaba se tornando inutil sozinho. Saber como utilizar HTML e o que torna esse jogo arbitrario e bom para ambos. 
+Podemos ver como caso a seguinte explicacao, escreva uma pagina somente com HTML e outra pagina apenas com CSS
+Voce conseguira ver a pagina com HTML mas a que tem somente CSS não.
+
+Para criar arquivos direto do terminal, utilizando comando de linha basta colocar touch mais o nome do arquivo
