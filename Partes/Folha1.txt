@@ -4,3 +4,11 @@ Podemos ver como caso a seguinte explicacao, escreva uma pagina somente com HTML
 Voce conseguira ver a pagina com HTML mas a que tem somente CSS não.
 
 Para criar arquivos direto do terminal, utilizando comando de linha basta colocar touch mais o nome do arquivo
+
+Quando voce considerar o CSS para um site, primeiro oense apenas em uma folha de estilo externa e nao na marcacao o que significa que as alteracies em todo o site sao um trabalho de uma folha so. 
+Uma vez que o navegador acessar a folha de estilo ela sera colocada em cache e nao sera ,ais necessario o seu download. O resultado sao paginas que sao rederizadas mais rapidos mas tambem a economia maior em largura de banda. 
+
+Pergunte a um desenvolvedor CSS os beneficios dessa tecnologia, e ele falara um monte com isso pergunte como ele organiza a sua folha de estilo e tera uma resposta vaga. 
+querendo ou nao a folha comeca pequena e termina inflada, quanto mais regras tiverem mais ela sera inflada
+e importante manter as coisas bem organizadas, ver multiplas folha para uma plataforma pode se torna excesso de engenharia que acarreta em mal gerenciamento. 
+a melhor abordagem e usar pastas
