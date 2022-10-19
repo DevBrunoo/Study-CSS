@@ -1,0 +1,5 @@
+/* A ajustar a cor ho h2 quando usado como título
+-------------------------------------------------- */
+h2#title {
+    color: #F00;
+}

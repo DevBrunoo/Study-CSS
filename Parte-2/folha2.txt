@@ -1,0 +1,199 @@
+Metodologia simples e quando podemos muitas das vezes economizar no css para controlar uns poucos elementos.
+Comece a fazer muitas folhas de estilos e trabalhar com diversos seletores, e tudo pode virar um caos.
+
+O CSS pode ser colocado em cascara, herdar, ser agrupado e conxtentualizado.
+Conhecimento basico em alguns requesitos podem trazer um conhecimento muito maior do que fazer com CSS. 
+O conhecimento desses requesitos e o que diferencia amador de proficional. 
+
+1) ID vs CLASS
+2) Como usar cascata
+3) Agrupamento 
+4) Heranca 
+5) Selectores contextuais 
+6) Medidas CSS
+
+1)CSS permite que voce permite que voce defina seus proprios Selectores personalizados, conhecidos como Selectores ID e CLASS.
+
+Simplificando ID e unico voce nao pode usar mais do que em uma tag para definila, porem
+class voce pode usar em mais de uma tag. Historicamente muitos Devs nao sabiam diferenciar class de id, o que complicava muito o projeto.
+
+Conforme dito antes ID e unico ou seja so pode ser usado uma unica vez em uma pagina, que constitui um ID unico de um elemento.
+Exemlos abaixo usando ID: 
+
+
+/* No HTML
+----------------*/
+
+<p id="highlight">This paragraph has red text</p>
+<p id="default">This paragraph has dark gray text</p>
+
+/* No CSS
+----------------*/
+
+/* Define o texto em destaque
+----------------------------- */
+#highlight {
+    color: #f00;
+}
+
+/* Define o texto padrão
+----------------------------- */
+#default {
+    color:#333;
+}
+
+
+
+----
+
+ID podem ser configurados na folha de estilo para fornecerem mais controle.
+Nesse exemplo mudara todas os elementos h2 para cinza com 16 pixels.
+/* Estilo de cabeçalho basico
+------------------------------ */
+h2 {
+    color: #333;
+    font-size: 16px;
+}
+Agora usando da seguinte maneira, se aplicara outra regra que sempre, que estiver #title no h2 junto com ID, ele mudara ou seja apenas um elemento que estiver assim muldara
+
+/* A ajustar a cor ho h2 quando usado como título / Arquivo CSS
+--------------------------------------------------------------- */
+h2#title {
+    color: #F00;
+}
+
+/* Arquivo HTML
+----------------- */
+
+<h2 id="title">Title of My article</h2>
+
+Somente use ID, quando estiver certeza que nao clonara o elemento, ou seja nao escrevera novamente. 
+ID deve ser usado para elementos unicos, que serão usados somente uma unica vez!!
+
+-/--------/----/--//--/-//--/---//-/---//-//-/-/-/-/-/-/--/-//---/-
+
+Diferença entre class e ID. 
+
+1) Class pode usar diversas vezes, porem ID e so para elementos unicos
+2) Class se define no arquivo CSS com . na frente e ID usa # para ser definido. 
+Exemplo:
+
+/* Usando CLASS
+----------------- */
+
+.highlight {
+    color: #f00
+}
+
+/* Usando ID
+----------------- */
+
+#highlight {
+    color: purple
+}
+
+-/--------/----/--//--/-//--/---//-/---//-//-/-/-/-/-/-/--/-//---/-
+
+Class pode ser usado muitas vezes, nunca use um ID em algo que ira multiplicar use uma CLASS. 
+Exemplos sao imagens que podem ser melhor utilizadas com class e nao ID. 
+
+Exemplo abaixo como aplicar class no HTML, usamos class="name" na tag aonde definimos o nome dela.
+(para o texto em vermelho(red) e default para o texto (gray))
+
+<p class="highlight">This paragraph has red texte </p>
+<p class="default">This paragraph has dark gray text.  </p>
+<p class="default">This paragraph also has dark gray text </p>
+
+Veja no exemplo que class pode ser usado mais de uma vez, o seja o nome definido em uma class pode ser usado 
+outra vez para dar o mesmo elemento a tag. O que facilita muito no desenvolvimento, so tome cuidados 
+para nao usar de mais e causar excesso de engenharia. 
+
+/* Defina class highligh
+----------------- */
+
+.highlight {
+    color: #f00;
+}
+
+/* Defina class default
+----------------- */
+
+.default {
+    color: #333;
+}
+
+-/--------/----/--//--/-//--/---//-/---//-//-/-/-/-/-/-/--/-//---/-
+
+Combinando ID com multiplas CLASS
+
+Class sao uteis especialmente quando se que ter controle de diversos elementos
+considere a seguinte lista de bebidas, o codigo vai ficar no drinks.html 
+
+
+
+<ul id="drinks">
+    <li class="alcohol">Beer</li>
+    <li class="alcohol">Spirits</li>
+    <li class="mixer">Cola</li>
+    <li class="mixer">Lemonade</li>
+    <li class="hot">Tea</li>
+    <li class="hot">Coffee</li>
+</ul>
+
+
+<!-- 
+Explicando conjução de Class e ID
+
+Veja que ID drinks e definido apenas uma vez, na lista ordenada (<ul>) portanto (id="drinks")
+não sera usado novamente na pagina em lugar algum permitindo que a lista seja estlizada de forma unica.
+Repare que Beer e Spirits estao entre os elementos definidos com (class="alcohol")
+Cola e Lemonade estao entre os que foram definidos com (class="mixer")
+Por ultimo tea e coffe foram definidos com (class="hot")
+isso permite que cada grupo de bebida seja tratada como unico.  
+
+Como vai ficar a folha de estilo.
+
+/* Esilo da lista de bebidas
+------------------------------- */
+
+ul#drinks{
+    color:#F00;
+}
+
+Depois as classes sao definidas com tons cinzas
+
+/* Define a cor para alcool
+------------------------------- */
+.alcohol {
+    color:#333;
+}
+/* Define a cor para mixer
+---------------------------- */
+.mixer{
+    color:#999;
+}
+/* Define a cor para bebidas quentes
+------------------------------------- */
+.hot{
+    color: #ccc;
+}
+
+ -->
+
+
+ -/--------/----/--//--/-//--/---//-/---//-//-/-/-/-/-/-/--/-//---/-
+
+Dica antes de colocar class no elemento, certifiquese se ele realmente precise. 
+Muitas vezes web desings exageram no uso de class, sendo que XHTML ja oferece ganchos
+Certifique-se de que o elemento nao possa ser controlado atraves de um seletor ou metodos descendentes, antes de optar por uma class
+Essa dica vai ajudar a manter is desing mais limpos, e facilitar o desenvolvimento do projeto
+
+Quando usar uma class: 
+Use class para controlar elementos que pertencam a um grupo, para os intens temporarios e tambem para 
+incrementar o comportamento de um ID.
+
+Quando nao usar: 
+Nao recomendo usar nos principais elementos estruturais de una pagina, como cabecalho e navegacao principal apesar de funcionarem.
+Fazer isso diminui a flexbilidade de seu design na maioria das vezes, e dificulta fulturas alteracoes, o que pode acarretar no azar de excesso de engenharia
+
+Lembresse que class e usada para execoes de estilos, e nao pode ser usada para mudar do visual de um elemento classificado. 
