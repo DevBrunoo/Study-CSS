@@ -1,0 +1,27 @@
+
+
+
+/* Esilo da lista de bebidas
+------------------------------- */
+
+ul#drinks{
+    color:#F00;
+}
+
+Depois as classes sao definidas com tons cinzas
+
+/* Define a cor para alcool
+------------------------------- */
+.alcohol {
+    color:#333;
+}
+/* Define a cor para mixer
+---------------------------- */
+.mixer{
+    color:#999;
+}
+/* Define a cor para bebidas quentes
+------------------------------------- */
+.hot{
+    color: #ccc;
+}
